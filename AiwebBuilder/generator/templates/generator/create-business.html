@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Business</title>
+</head>
+<body>
+
+    <h1>Create Your Business</h1>
+
+    <form action="" method = "POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type = "submit">Create Business</button>
+    </form>
+    
+</body>
+</html>

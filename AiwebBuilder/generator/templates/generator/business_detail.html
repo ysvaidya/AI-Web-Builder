@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ business.business_name }}</title>
+</head>
+<body>
+    <h1>{{ business.business_name }}</h1>
+
+    <p>{{ business.business_type }}</p>
+
+    <p>{{ business.description }}</p>
+
+    <a href="{% url 'generate_website' business.id %}">
+        Generate Website
+    </a>
+        
+</body>
+</html>

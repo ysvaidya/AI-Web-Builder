@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesite-Preview</title>
+</head>
+<body>
+    <h1>{{ website.hero_title }}</h1>
+
+    <p>{{ website.hero_subtitle }}</p>
+
+    <h2>About</h2>
+
+    <p>{{ website.about_text }}</p>
+
+    <h2>
+        Services
+    </h2>
+
+    {% for service in website.services  %}
+        <p>{{ service }}</p>
+    {% endfor %}
+
+    {% for feq in website.faqs  %}
+        <h4>{{ feq.question }}</h4>
+        <p>{{ feq.answers }}</p>
+    {% endfor %}
+
+    {% for testinonial in website.testimonials  %}
+        <h4>{{ testinonial.name }}</h4>
+        <p>{{ testinonial.reviews }}</p>
+    {% endfor %}
+
+    {% for plan in website.Pricing_plans  %}
+        <p>{{ Plan.name }}</p>
+        <p>{{ Plan.price }}</p>
+    {% endfor %}
+
+
+    <p>{{ website.seo_title }}</p>
+
+    <p>{{ website.seo_description }}</p>
+
+    <p>{{ website.selected_template }}</p>
+    
+</body>
+</html>
