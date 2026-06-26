@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Manrope Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Summer Agency</title>
+
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FAFAFA] text-gray-900 min-h-screen">
+
+    <!-- Background Glow -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px]
+                bg-indigo-200 blur-[140px] opacity-60 -z-10">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-5 left-0 w-full px-4 z-50">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="
+                flex items-center justify-between
+                px-8 py-4
+                rounded-full
+                bg-white/80
+                backdrop-blur-xl
+                border border-gray-200
+                shadow-sm">
+
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold tracking-tight">
+                    Summer<span class="text-indigo-600">.</span>
+                </a>
+
+                <!-- Navigation -->
+                <ul class="hidden md:flex items-center gap-8">
+
+                    <li>
+                        <a href="#home"
+                           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services"
+                           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#blog"
+                           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#portfolio"
+                           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Portfolio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact"
+                           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- CTA Button -->
+                <a href="#contact"
+                   class="
+                   hidden md:flex
+                   items-center gap-2
+                   px-6 py-3
+                   rounded-full
+                   bg-gray-900
+                   text-white
+                   text-sm
+                   font-semibold
+                   hover:bg-black
+                   transition-all duration-300">
+
+                    Let's Talk
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+    id="home"
+    class="min-h-screen flex items-center justify-center px-6">
+
+    <div class="max-w-4xl text-center">
+
+        <!-- Badge -->
+        <span class="
+            inline-flex items-center
+            px-4 py-2
+            rounded-full
+            border border-gray-200
+            bg-white
+            text-sm
+            text-gray-600">
+
+            Creative Launchpad For Modern Brands
+
+        </span>
+
+        <!-- Heading -->
+        <h1 class="
+            mt-8
+            text-6xl md:text-8xl
+            font-extrabold
+            tracking-tight
+            leading-[0.95]">
+
+            Design That
+            Helps Your
+            Business Grow.
+
+        </h1>
+
+        <!-- Description -->
+        <p class="
+            mt-8
+            max-w-2xl
+            mx-auto
+            text-lg
+            text-gray-600
+            leading-relaxed">
+
+            We create modern websites, visual identities and
+            digital experiences that help ambitious businesses
+            attract customers and scale faster.
+
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex justify-center gap-4 mt-10">
+
+            <a href="#contact"
+                class="
+                px-7 py-4
+                rounded-full
+                bg-gray-900
+                text-white
+                font-semibold">
+
+                Start Project
+
+            </a>
+
+            <a href="#portfolio"
+                class="
+                px-7 py-4
+                rounded-full
+                bg-white
+                border
+                border-gray-200">
+
+                View Work
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-32 px-6">
+
+    <section id="about" class="py-32 px-6 bg-[#FAFAFA]">
+
+```
+<div class="max-w-7xl mx-auto">
+
+    <!-- Section Label -->
+    <span class="
+        inline-flex
+        px-4 py-2
+        rounded-full
+        bg-white
+        border border-gray-200
+        text-sm
+        font-semibold
+        text-indigo-600">
+
+        About Us
+
+    </span>
+
+    <!-- Main Layout -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center mt-10">
+
+        <!-- Image -->
+        <div class="relative">
+
+            <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                alt="Business Team"
+                class="
+                w-full
+                h-[600px]
+                object-cover
+                rounded-[32px]
+                shadow-lg">
+
+            <!-- Floating Card -->
+            <div class="
+                absolute
+                bottom-6
+                left-6
+                bg-white
+                rounded-3xl
+                border border-gray-200
+                p-6
+                shadow-lg">
+
+                <p class="font-semibold text-gray-900">
+                    Building Modern Digital Experiences
+                </p>
+
+                <p class="text-sm text-gray-500 mt-1">
+                    Tailored solutions for ambitious businesses.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Content -->
+        <div>
+
+            <h2 class="
+                text-5xl md:text-6xl
+                font-extrabold
+                tracking-tight
+                leading-tight">
+
+                Helping Businesses Build
+                Stronger Digital Experiences.
+
+            </h2>
+
+            <p class="
+                mt-8
+                text-lg
+                text-gray-600
+                leading-relaxed">
+
+                We help businesses establish a strong presence through
+                thoughtful design, modern websites, and strategic digital
+                solutions that support growth and customer engagement.
+
+            </p>
+
+            <p class="
+                mt-6
+                text-lg
+                text-gray-600
+                leading-relaxed">
+
+                By combining creativity, technology, and a deep
+                understanding of business goals, we create solutions
+                that deliver measurable value and long-term success.
+
+            </p>
+
+            <!-- Feature Points -->
+            <div class="grid sm:grid-cols-2 gap-4 mt-10">
+
+                <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-200">
+                    <span class="text-indigo-600 font-bold">✓</span>
+                    <span class="font-medium">Strategic Thinking</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-200">
+                    <span class="text-indigo-600 font-bold">✓</span>
+                    <span class="font-medium">Modern Design</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-200">
+                    <span class="text-indigo-600 font-bold">✓</span>
+                    <span class="font-medium">Business Focused</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-200">
+                    <span class="text-indigo-600 font-bold">✓</span>
+                    <span class="font-medium">Long-Term Value</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- HOW WE WORK -->
+    <div class="mt-32">
+
+        <h3 class="
+            text-4xl
+            font-bold
+            tracking-tight
+            text-center">
+
+            How We Work
+
+        </h3>
+
+        <p class="
+            text-center
+            text-gray-600
+            mt-4
+            max-w-2xl
+            mx-auto">
+
+            A proven process designed to deliver clarity,
+            efficiency, and measurable business results.
+
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <span class="text-5xl font-bold text-indigo-600">01</span>
+                <h4 class="text-2xl font-bold mt-4">Discovery</h4>
+                <p class="text-gray-600 mt-3">
+                    Understanding your goals, audience, and business challenges.
+                </p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <span class="text-5xl font-bold text-indigo-600">02</span>
+                <h4 class="text-2xl font-bold mt-4">Strategy</h4>
+                <p class="text-gray-600 mt-3">
+                    Creating a roadmap focused on growth and measurable outcomes.
+                </p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <span class="text-5xl font-bold text-indigo-600">03</span>
+                <h4 class="text-2xl font-bold mt-4">Creation</h4>
+                <p class="text-gray-600 mt-3">
+                    Designing and building tailored solutions that fit your needs.
+                </p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <span class="text-5xl font-bold text-indigo-600">04</span>
+                <h4 class="text-2xl font-bold mt-4">Growth</h4>
+                <p class="text-gray-600 mt-3">
+                    Optimizing and supporting your business for long-term success.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- WHY CHOOSE US -->
+    <div class="mt-32">
+
+        <h3 class="
+            text-4xl
+            font-bold
+            tracking-tight
+            text-center">
+
+            Why Choose Us
+
+        </h3>
+
+        <p class="
+            text-center
+            text-gray-600
+            mt-4
+            max-w-2xl
+            mx-auto">
+
+            We combine creativity, strategy, and technology to
+            deliver solutions that make a real impact.
+
+        </p>
+
+        <!-- 2 x 2 Grid -->
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <h4 class="text-xl font-bold">Strategic Approach</h4>
+                <p class="mt-4 text-gray-600">
+                    Every project begins with a clear understanding of business goals.
+                </p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <h4 class="text-xl font-bold">Modern Design</h4>
+                <p class="mt-4 text-gray-600">
+                    Clean and professional experiences built for today's audience.
+                </p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <h4 class="text-xl font-bold">Client Focused</h4>
+                <p class="mt-4 text-gray-600">
+                    Solutions are tailored to each client's unique needs.
+                </p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                <h4 class="text-xl font-bold">Long-Term Value</h4>
+                <p class="mt-4 text-gray-600">
+                    We create foundations that help businesses grow sustainably.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- SERVICES -->
+
+<!-- ========================= -->
+
+<section id="services" class="py-32 px-6">
+
+
+<div class="max-w-7xl mx-auto">
+
+    <div class="text-center max-w-3xl mx-auto">
+
+        <span class="text-indigo-600 font-semibold uppercase tracking-widest">
+            Services
+        </span>
+
+        <h2 class="text-5xl font-bold tracking-tight mt-4">
+            Solutions Designed For Growth
+        </h2>
+
+        <p class="text-gray-600 mt-6 text-lg">
+            Professional services tailored to help businesses establish,
+            grow, and strengthen their digital presence.
+        </p>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+
+        <div class="bg-white p-8 rounded-3xl border border-gray-200">
+            <h3 class="text-xl font-bold">Website Design</h3>
+            <p class="mt-4 text-gray-600">Modern websites built to engage visitors and drive conversions.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-gray-200">
+            <h3 class="text-xl font-bold">Brand Identity</h3>
+            <p class="mt-4 text-gray-600">Distinctive branding that helps businesses stand out.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-gray-200">
+            <h3 class="text-xl font-bold">SEO Optimization</h3>
+            <p class="mt-4 text-gray-600">Improve visibility and attract qualified traffic.</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ========================= -->
+
+<!-- PROCESS -->
+
+<!-- ========================= -->
+
+    <section id="process" class="py-32 px-6 bg-white">
+
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="text-indigo-600 font-semibold uppercase tracking-widest">
+                    Process
+                </span>
+
+                <h2 class="text-5xl font-bold tracking-tight mt-4">
+                    How We Work
+                </h2>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-16">
+
+                <div class="p-8 rounded-3xl border border-gray-200">
+                    <span class="text-5xl font-bold text-indigo-600">01</span>
+                    <h3 class="text-2xl font-bold mt-4">Discovery</h3>
+                    <p class="text-gray-600 mt-3">Understanding goals, audience, and opportunities.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl border border-gray-200">
+                    <span class="text-5xl font-bold text-indigo-600">02</span>
+                    <h3 class="text-2xl font-bold mt-4">Strategy</h3>
+                    <p class="text-gray-600 mt-3">Creating a roadmap aligned with business objectives.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl border border-gray-200">
+                    <span class="text-5xl font-bold text-indigo-600">03</span>
+                    <h3 class="text-2xl font-bold mt-4">Creation</h3>
+                    <p class="text-gray-600 mt-3">Designing and building solutions that deliver value.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl border border-gray-200">
+                    <span class="text-5xl font-bold text-indigo-600">04</span>
+                    <h3 class="text-2xl font-bold mt-4">Launch</h3>
+                    <p class="text-gray-600 mt-3">Deploying, optimizing, and supporting long-term growth.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+            </section>
+
+            <!-- ========================= -->
+
+            <!-- PORTFOLIO -->
+
+            <!-- ========================= -->
+
+            <section id="portfolio" class="py-32 px-6">
+
+
+            <div class="max-w-7xl mx-auto">
+
+                <div class="text-center max-w-3xl mx-auto">
+
+                    <span class="text-indigo-600 font-semibold uppercase tracking-widest">
+                        Portfolio
+                    </span>
+
+                    <h2 class="text-5xl font-bold tracking-tight mt-4">
+                        Recent Work
+                    </h2>
+
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+                    <div class="bg-white rounded-3xl overflow-hidden border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+                            class="w-full h-60 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl">Project One</h3>
+                            <p class="text-gray-600 mt-2">Business Website</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl overflow-hidden border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+                            class="w-full h-60 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl">Project Two</h3>
+                            <p class="text-gray-600 mt-2">Brand Identity</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl overflow-hidden border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop"
+                            class="w-full h-60 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl">Project Three</h3>
+                            <p class="text-gray-600 mt-2">Digital Strategy</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            </section>
+
+            <!-- ========================= -->
+
+            <!-- TESTIMONIALS -->
+
+            <!-- ========================= -->
+
+            <section id="testimonials" class="py-32 px-6 bg-white">
+
+
+            <div class="max-w-7xl mx-auto">
+
+                <div class="text-center max-w-3xl mx-auto">
+
+                    <span class="text-indigo-600 font-semibold uppercase tracking-widest">
+                        Testimonials
+                    </span>
+
+                    <h2 class="text-5xl font-bold tracking-tight mt-4">
+                        What Clients Say
+                    </h2>
+
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-6 mt-16">
+
+                    <div class="p-8 rounded-3xl border border-gray-200">
+                        <p class="text-gray-600 leading-relaxed">
+                            "Outstanding service and exceptional results."
+                        </p>
+                        <h4 class="font-bold mt-6">Sarah Johnson</h4>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-gray-200">
+                        <p class="text-gray-600 leading-relaxed">
+                            "Professional, responsive, and highly skilled."
+                        </p>
+                        <h4 class="font-bold mt-6">Michael Carter</h4>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-gray-200">
+                        <p class="text-gray-600 leading-relaxed">
+                            "A great partner for growing our business online."
+                        </p>
+                        <h4 class="font-bold mt-6">Emily Roberts</h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left Side -->
+                <div>
+
+                    <span class="
+                        inline-flex
+                        px-4 py-2
+                        rounded-full
+                        bg-white
+                        border border-gray-200
+                        text-sm
+                        font-semibold
+                        text-indigo-600">
+
+                        Contact Us
+
+                    </span>
+
+                    <h2 class="
+                        mt-8
+                        text-5xl md:text-6xl
+                        font-extrabold
+                        tracking-tight">
+
+                        Let's Build Something
+                        Great Together.
+
+                    </h2>
+
+                    <p class="
+                        mt-6
+                        text-lg
+                        text-gray-600
+                        leading-relaxed">
+
+                        Ready to take your business to the next level?
+                        Get in touch and let's discuss how we can help
+                        bring your vision to life.
+
+                    </p>
+
+                    <div class="mt-10 space-y-6">
+
+                        <div>
+                            <p class="text-sm text-gray-500">Email</p>
+                            <p class="font-semibold text-lg">
+                                hello@summeragency.com
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm text-gray-500">Phone</p>
+                            <p class="font-semibold text-lg">
+                                +91 98765 43210
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm text-gray-500">Location</p>
+                            <p class="font-semibold text-lg">
+                                Pune, Maharashtra, India
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="
+                    bg-white
+                    p-8
+                    rounded-[32px]
+                    border border-gray-200
+                    shadow-sm">
+
+                    <form class="space-y-6">
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="
+                                w-full
+                                px-5
+                                py-4
+                                rounded-2xl
+                                border border-gray-200
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-indigo-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                class="
+                                w-full
+                                px-5
+                                py-4
+                                rounded-2xl
+                                border border-gray-200
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-indigo-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">
+                                Message
+                            </label>
+
+                            <textarea
+                                rows="6"
+                                class="
+                                w-full
+                                px-5
+                                py-4
+                                rounded-2xl
+                                border border-gray-200
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-indigo-500"></textarea>
+                        </div>
+
+                        <button
+                            class="
+                            w-full
+                            py-4
+                            rounded-full
+                            bg-gray-900
+                            text-white
+                            font-semibold
+                            hover:bg-black
+                            transition">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0F172A] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-24">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <!-- Brand -->
+                <div>
+
+                    <h3 class="
+                        text-3xl
+                        font-extrabold
+                        tracking-tight">
+
+                        Summer<span class="text-indigo-400">.</span>
+
+                    </h3>
+
+                    <p class="
+                        mt-6
+                        text-slate-400
+                        leading-relaxed">
+
+                        Helping businesses grow through modern
+                        design, strategic thinking, and digital
+                        experiences that create lasting impact.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h4 class="font-semibold text-lg">
+                        Quick Links
+                    </h4>
+
+                    <ul class="mt-6 space-y-4 text-slate-400">
+
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Services -->
+                <div>
+
+                    <h4 class="font-semibold text-lg">
+                        Services
+                    </h4>
+
+                    <ul class="mt-6 space-y-4 text-slate-400">
+
+                        <li>Website Design</li>
+                        <li>Brand Identity</li>
+                        <li>SEO Optimization</li>
+                        <li>Digital Strategy</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h4 class="font-semibold text-lg">
+                        Contact
+                    </h4>
+
+                    <div class="mt-6 space-y-4 text-slate-400">
+
+                        <p>hello@summeragency.com</p>
+                        <p>+91 98765 43210</p>
+                        <p>Pune, Maharashtra</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+            <div class="
+                mt-16
+                pt-8
+                border-t border-slate-800
+                flex flex-col md:flex-row
+                justify-between
+                items-center
+                gap-4">
+
+                <p class="text-slate-500 text-sm">
+                    © 2026 Summer. All rights reserved.
+                </p>
+
+                <div class="flex gap-6 text-slate-400 text-sm">
+
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Café Aroma</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#FFF8E7] text-[#2C1810]">
+
+    <!-- Background Glow -->
+    <div class="
+        fixed
+        top-0
+        left-1/2
+        -translate-x-1/2
+        w-[700px]
+        h-[350px]
+        bg-[#D4A373]
+        opacity-20
+        blur-[140px]
+        -z-10">
+    </div>
+
+    <!-- NAVBAR -->
+    <nav x-data="{ scrolled: false }"
+        @scroll.window="scrolled = window.pageYOffset > 50"
+        class="fixed top-5 left-0 w-full px-4 z-50 ">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div
+                :class="scrolled
+                ? 'bg-[#FFF8E7]/90 backdrop-blur-xl border border-[#D4A373]/20 shadow-lg py-3'
+                : 'bg-[#FFF8E7]/60 backdrop-blur-md border border-transparent py-4'"
+                class="
+                transition-all
+                duration-300
+                rounded-full
+                px-8
+                flex
+                items-center
+                justify-between">
+
+                <!-- Logo -->
+                <a href="#home"
+                    class="
+                    heading-font
+                    text-3xl
+                    font-bold
+                    text-[#4A2C2A]">
+
+                    Café Aroma
+
+                </a>
+
+                <!-- Links -->
+                <ul class="
+                    hidden
+                    md:flex
+                    items-center
+                    gap-10">
+
+                    <li>
+                        <a href="#home"
+                            class="text-sm font-medium hover:text-[#D4A373] transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about"
+                            class="text-sm font-medium hover:text-[#D4A373] transition">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#menu"
+                            class="text-sm font-medium hover:text-[#D4A373] transition">
+                            Menu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#gallery"
+                            class="text-sm font-medium hover:text-[#D4A373] transition">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#testimonials"
+                            class="text-sm font-medium hover:text-[#D4A373] transition">
+                            Testimonials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact"
+                            class="text-sm font-medium hover:text-[#D4A373] transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- CTA -->
+                <a href="#contact"
+                    class="
+                    hidden
+                    md:flex
+                    items-center
+                    px-6
+                    py-3
+                    rounded-full
+                    bg-[#4A2C2A]
+                    text-white
+                    text-sm
+                    font-semibold
+                    hover:bg-[#2C1810]
+                    transition">
+
+                    Reserve Table
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+        <!-- HERO SECTION -->
+    <section
+        id="home"
+        class="min-h-screen flex items-center px-6 pt-32">
+
+        <div class="max-w-7xl mx-auto w-full">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- LEFT CONTENT -->
+                <div>
+
+                    <!-- Badge -->
+                    <span class="
+                        inline-flex
+                        items-center
+                        px-4
+                        py-2
+                        rounded-full
+                        bg-[#D4A373]/10
+                        border
+                        border-[#D4A373]/20
+                        text-[#4A2C2A]
+                        font-medium">
+
+                        ☕ Freshly Brewed Every Day
+
+                    </span>
+
+                    <!-- Heading -->
+                    <h1 class="
+                        heading-font
+                        mt-8
+                        text-5xl
+                        md:text-6xl
+                        lg:text-7xl
+                        font-bold
+                        leading-tight
+                        text-[#4A2C2A]">
+
+                        Crafted With Passion,
+                        Served With Love.
+
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="
+                        mt-8
+                        text-lg
+                        text-[#2C1810]/80
+                        max-w-xl
+                        leading-relaxed">
+
+                        Experience freshly prepared dishes,
+                        artisan coffee, and a warm atmosphere
+                        designed to bring people together.
+                        Every meal is made with care and
+                        served with genuine hospitality.
+
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="
+                        flex
+                        flex-wrap
+                        gap-4
+                        mt-10">
+
+                        <a href="#menu"
+                            class="
+                            px-8
+                            py-4
+                            rounded-full
+                            bg-[#4A2C2A]
+                            text-white
+                            font-semibold
+                            hover:bg-[#2C1810]
+                            transition">
+
+                            View Menu
+
+                        </a>
+
+                        <a href="#contact"
+                            class="
+                            px-8
+                            py-4
+                            rounded-full
+                            border
+                            border-[#D4A373]
+                            text-[#4A2C2A]
+                            font-semibold
+                            hover:bg-[#D4A373]/10
+                            transition">
+
+                            Reserve Table
+
+                        </a>
+
+                    </div>
+
+                    <!-- Trust Cards -->
+                    <div class="
+                        flex
+                        flex-wrap
+                        gap-4
+                        mt-12">
+
+                        <div class="
+                            bg-white
+                            px-5
+                            py-4
+                            rounded-2xl
+                            shadow-sm
+                            border border-[#D4A373]/20">
+
+                            <p class="font-bold text-[#4A2C2A]">
+                                ⭐ 4.9 Rating
+                            </p>
+
+                        </div>
+
+                        <div class="
+                            bg-white
+                            px-5
+                            py-4
+                            rounded-2xl
+                            shadow-sm
+                            border border-[#D4A373]/20">
+
+                            <p class="font-bold text-[#4A2C2A]">
+                                Fresh Ingredients
+                            </p>
+
+                        </div>
+
+                        <div class="
+                            bg-white
+                            px-5
+                            py-4
+                            rounded-2xl
+                            shadow-sm
+                            border border-[#D4A373]/20">
+
+                            <p class="font-bold text-[#4A2C2A]">
+                                1000+ Happy Guests
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT IMAGE -->
+                <div class="relative">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop"
+                        alt="Cafe Interior"
+                        class="
+                        w-full
+                        h-[650px]
+                        object-cover
+                        rounded-[40px]
+                        shadow-2xl">
+
+                    <!-- Floating Card -->
+                    <div class="
+                        absolute
+                        bottom-6
+                        left-6
+                        bg-white/95
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-5
+                        shadow-lg">
+
+                        <p class="
+                            text-sm
+                            text-[#D4A373]
+                            font-semibold">
+
+                            OPEN DAILY
+
+                        </p>
+
+                        <p class="
+                            mt-1
+                            text-lg
+                            font-bold
+                            text-[#4A2C2A]">
+
+                            8:00 AM – 11:00 PM
+
+                        </p>
+
+                    </div>
+
+                    <!-- Floating Card -->
+                    <div class="
+                        absolute
+                        top-6
+                        right-6
+                        bg-white/95
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-5
+                        shadow-lg">
+
+                        <p class="
+                            text-sm
+                            text-[#D4A373]
+                            font-semibold">
+
+                            SIGNATURE
+
+                        </p>
+
+                        <p class="
+                            mt-1
+                            text-lg
+                            font-bold
+                            text-[#4A2C2A]">
+
+                            Artisan Coffee
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section
+        id="about"
+        class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Image Side -->
+                <div class="relative">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+                        alt="Restaurant Interior"
+                        class="
+                        w-full
+                        h-[650px]
+                        object-cover
+                        rounded-[40px]
+                        shadow-xl">
+
+                    <!-- Floating Card -->
+                    <div class="
+                        absolute
+                        bottom-6
+                        left-6
+                        bg-white/95
+                        backdrop-blur-md
+                        rounded-3xl
+                        px-6
+                        py-5
+                        shadow-lg">
+
+                        <p class="
+                            text-sm
+                            font-semibold
+                            text-[#D4A373]">
+
+                            SINCE 2018
+
+                        </p>
+
+                        <p class="
+                            mt-1
+                            text-lg
+                            font-bold
+                            text-[#4A2C2A]">
+
+                            Serving Delicious
+                            Memories Daily
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Content Side -->
+                <div>
+
+                    <!-- Label -->
+                    <span class="
+                        inline-flex
+                        items-center
+                        px-4
+                        py-2
+                        rounded-full
+                        bg-[#D4A373]/10
+                        border
+                        border-[#D4A373]/20
+                        text-[#4A2C2A]
+                        font-medium">
+
+                        About Us
+
+                    </span>
+
+                    <!-- Heading -->
+                    <h2 class="
+                        heading-font
+                        mt-8
+                        text-5xl
+                        md:text-6xl
+                        font-bold
+                        leading-tight
+                        text-[#4A2C2A]">
+
+                        Bringing People
+                        Together Through
+                        Great Food.
+
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="
+                        mt-8
+                        text-lg
+                        leading-relaxed
+                        text-[#2C1810]/80">
+
+                        At Café Aroma, we believe every meal should be
+                        an experience worth remembering. Our chefs
+                        combine fresh ingredients, carefully selected
+                        recipes, and a passion for hospitality to create
+                        dishes that delight every guest.
+
+                    </p>
+
+                    <p class="
+                        mt-6
+                        text-lg
+                        leading-relaxed
+                        text-[#2C1810]/80">
+
+                        Whether you're stopping by for a morning coffee,
+                        a casual lunch, or an evening gathering with
+                        friends and family, our warm atmosphere and
+                        attentive service make every visit special.
+
+                    </p>
+
+                    <!-- Feature Grid -->
+                    <div class="
+                        grid
+                        sm:grid-cols-2
+                        gap-5
+                        mt-10">
+
+                        <!-- Card 1 -->
+                        <div class="
+                            bg-white
+                            p-5
+                            rounded-3xl
+                            shadow-sm
+                            border
+                            border-[#D4A373]/20">
+
+                            <h4 class="
+                                font-bold
+                                text-[#4A2C2A]">
+
+                                Fresh Ingredients
+
+                            </h4>
+
+                            <p class="
+                                mt-2
+                                text-sm
+                                text-[#2C1810]/70">
+
+                                Daily sourced quality produce.
+
+                            </p>
+
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="
+                            bg-white
+                            p-5
+                            rounded-3xl
+                            shadow-sm
+                            border
+                            border-[#D4A373]/20">
+
+                            <h4 class="
+                                font-bold
+                                text-[#4A2C2A]">
+
+                                Handcrafted Recipes
+
+                            </h4>
+
+                            <p class="
+                                mt-2
+                                text-sm
+                                text-[#2C1810]/70">
+
+                                Prepared with care and passion.
+
+                            </p>
+
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="
+                            bg-white
+                            p-5
+                            rounded-3xl
+                            shadow-sm
+                            border
+                            border-[#D4A373]/20">
+
+                            <h4 class="
+                                font-bold
+                                text-[#4A2C2A]">
+
+                                Cozy Atmosphere
+
+                            </h4>
+
+                            <p class="
+                                mt-2
+                                text-sm
+                                text-[#2C1810]/70">
+
+                                A welcoming space to relax.
+
+                            </p>
+
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="
+                            bg-white
+                            p-5
+                            rounded-3xl
+                            shadow-sm
+                            border
+                            border-[#D4A373]/20">
+
+                            <h4 class="
+                                font-bold
+                                text-[#4A2C2A]">
+
+                                Exceptional Service
+
+                            </h4>
+
+                            <p class="
+                                mt-2
+                                text-sm
+                                text-[#2C1810]/70">
+
+                                Friendly hospitality every day.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-10">
+
+                        <a href="#menu"
+                            class="
+                            inline-flex
+                            items-center
+                            gap-2
+                            px-8
+                            py-4
+                            rounded-full
+                            bg-[#4A2C2A]
+                            text-white
+                            font-semibold
+                            hover:bg-[#2C1810]
+                            transition">
+
+                            Explore Our Menu
+
+                            <span>→</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- MENU SECTION -->
+    <section
+        id="menu"
+        class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Heading -->
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    inline-flex
+                    px-4 py-2
+                    rounded-full
+                    bg-[#D4A373]/10
+                    border border-[#D4A373]/20
+                    text-[#4A2C2A]
+                    font-medium">
+
+                    Our Menu
+
+                </span>
+
+                <h2 class="
+                    heading-font
+                    mt-8
+                    text-5xl
+                    md:text-6xl
+                    font-bold
+                    text-[#4A2C2A]">
+
+                    Signature Dishes
+                    & Fresh Brews
+
+                </h2>
+
+                <p class="
+                    mt-6
+                    text-lg
+                    text-[#2C1810]/70">
+
+                    Carefully crafted meals and artisan coffee
+                    made with fresh ingredients and a passion
+                    for great taste.
+
+                </p>
+
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="
+                grid
+                md:grid-cols-2
+                lg:grid-cols-3
+                gap-8
+                mt-20">
+
+                <!-- Item 1 -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    overflow-hidden
+                    border border-[#D4A373]/20
+                    shadow-sm
+                    hover:shadow-xl
+                    transition">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+                        class="
+                        w-full
+                        h-64
+                        object-cover">
+
+                    <div class="p-6">
+
+                        <div class="
+                            flex
+                            justify-between
+                            items-center">
+
+                            <h3 class="
+                                font-bold
+                                text-xl
+                                text-[#4A2C2A]">
+
+                                Cappuccino
+
+                            </h3>
+
+                            <span class="
+                                font-bold
+                                text-[#D4A373]">
+
+                                $5
+
+                            </span>
+
+                        </div>
+
+                        <p class="
+                            mt-3
+                            text-[#2C1810]/70">
+
+                            Rich espresso topped with
+                            silky steamed milk foam.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 2 -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    overflow-hidden
+                    border border-[#D4A373]/20
+                    shadow-sm
+                    hover:shadow-xl
+                    transition">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop"
+                        class="
+                        w-full
+                        h-64
+                        object-cover">
+
+                    <div class="p-6">
+
+                        <div class="
+                            flex
+                            justify-between
+                            items-center">
+
+                            <h3 class="
+                                font-bold
+                                text-xl
+                                text-[#4A2C2A]">
+
+                                Artisan Latte
+
+                            </h3>
+
+                            <span class="
+                                font-bold
+                                text-[#D4A373]">
+
+                                $6
+
+                            </span>
+
+                        </div>
+
+                        <p class="
+                            mt-3
+                            text-[#2C1810]/70">
+
+                            Smooth handcrafted latte
+                            with premium coffee beans.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 3 -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    overflow-hidden
+                    border border-[#D4A373]/20
+                    shadow-sm
+                    hover:shadow-xl
+                    transition">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=1200&auto=format&fit=crop"
+                        class="
+                        w-full
+                        h-64
+                        object-cover">
+
+                    <div class="p-6">
+
+                        <div class="
+                            flex
+                            justify-between
+                            items-center">
+
+                            <h3 class="
+                                font-bold
+                                text-xl
+                                text-[#4A2C2A]">
+
+                                Croissant
+
+                            </h3>
+
+                            <span class="
+                                font-bold
+                                text-[#D4A373]">
+
+                                $4
+
+                            </span>
+
+                        </div>
+
+                        <p class="
+                            mt-3
+                            text-[#2C1810]/70">
+
+                            Freshly baked buttery
+                            croissant served warm.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 4 -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    overflow-hidden
+                    border border-[#D4A373]/20
+                    shadow-sm
+                    hover:shadow-xl
+                    transition">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop"
+                        class="
+                        w-full
+                        h-64
+                        object-cover">
+
+                    <div class="p-6">
+
+                        <div class="
+                            flex
+                            justify-between
+                            items-center">
+
+                            <h3 class="
+                                font-bold
+                                text-xl
+                                text-[#4A2C2A]">
+
+                                Wood Fired Pizza
+
+                            </h3>
+
+                            <span class="
+                                font-bold
+                                text-[#D4A373]">
+
+                                $14
+
+                            </span>
+
+                        </div>
+
+                        <p class="
+                            mt-3
+                            text-[#2C1810]/70">
+
+                            Crispy handcrafted pizza
+                            topped with fresh ingredients.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 5 -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    overflow-hidden
+                    border border-[#D4A373]/20
+                    shadow-sm
+                    hover:shadow-xl
+                    transition">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop"
+                        class="
+                        w-full
+                        h-64
+                        object-cover">
+
+                    <div class="p-6">
+
+                        <div class="
+                            flex
+                            justify-between
+                            items-center">
+
+                            <h3 class="
+                                font-bold
+                                text-xl
+                                text-[#4A2C2A]">
+
+                                Garden Salad
+
+                            </h3>
+
+                            <span class="
+                                font-bold
+                                text-[#D4A373]">
+
+                                $9
+
+                            </span>
+
+                        </div>
+
+                        <p class="
+                            mt-3
+                            text-[#2C1810]/70">
+
+                            Fresh seasonal vegetables
+                            with house dressing.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 6 -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    overflow-hidden
+                    border border-[#D4A373]/20
+                    shadow-sm
+                    hover:shadow-xl
+                    transition">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1200&auto=format&fit=crop"
+                        class="
+                        w-full
+                        h-64
+                        object-cover">
+
+                    <div class="p-6">
+
+                        <div class="
+                            flex
+                            justify-between
+                            items-center">
+
+                            <h3 class="
+                                font-bold
+                                text-xl
+                                text-[#4A2C2A]">
+
+                                Chocolate Cake
+
+                            </h3>
+
+                            <span class="
+                                font-bold
+                                text-[#D4A373]">
+
+                                $7
+
+                            </span>
+
+                        </div>
+
+                        <p class="
+                            mt-3
+                            text-[#2C1810]/70">
+
+                            Rich chocolate dessert
+                            made fresh daily.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-16">
+
+                <a href="#contact"
+                    class="
+                    inline-flex
+                    items-center
+                    gap-2
+                    px-8
+                    py-4
+                    rounded-full
+                    bg-[#4A2C2A]
+                    text-white
+                    font-semibold
+                    hover:bg-[#2C1810]
+                    transition">
+
+                    View Full Menu
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="gallery" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    inline-flex
+                    px-4 py-2
+                    rounded-full
+                    bg-[#D4A373]/10
+                    border border-[#D4A373]/20
+                    text-[#4A2C2A]">
+
+                    Gallery
+
+                </span>
+
+                <h2 class="
+                    heading-font
+                    mt-8
+                    text-5xl
+                    md:text-6xl
+                    font-bold
+                    text-[#4A2C2A]">
+
+                    Moments & Flavors
+
+                </h2>
+
+                <p class="
+                    mt-6
+                    text-lg
+                    text-[#2C1810]/70">
+
+                    Take a glimpse inside our café,
+                    our signature dishes, and the
+                    warm atmosphere our guests love.
+
+                </p>
+
+            </div>
+
+            <div class="
+                grid
+                md:grid-cols-3
+                gap-6
+                mt-20">
+
+                <!-- Large Image -->
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+                    class="
+                    md:col-span-2
+                    h-[500px]
+                    w-full
+                    object-cover
+                    rounded-[32px]">
+
+                <!-- Small -->
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                    class="
+                    h-[500px]
+                    w-full
+                    object-cover
+                    rounded-[32px]">
+
+                <img
+                    src="https://images.unsplash.com/photo-1525351484163-7529414344d8"
+                    class="
+                    h-[300px]
+                    w-full
+                    object-cover
+                    rounded-[32px]">
+
+                <img
+                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
+                    class="
+                    h-[300px]
+                    w-full
+                    object-cover
+                    rounded-[32px]">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+                    class="
+                    h-[300px]
+                    w-full
+                    object-cover
+                    rounded-[32px]">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="testimonials" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    inline-flex
+                    px-4 py-2
+                    rounded-full
+                    bg-[#D4A373]/10
+                    border border-[#D4A373]/20
+                    text-[#4A2C2A]">
+
+                    Testimonials
+
+                </span>
+
+                <h2 class="
+                    heading-font
+                    mt-8
+                    text-5xl
+                    md:text-6xl
+                    font-bold
+                    text-[#4A2C2A]">
+
+                    Loved By Our Guests
+
+                </h2>
+
+            </div>
+
+            <div class="
+                grid
+                md:grid-cols-3
+                gap-6
+                mt-20">
+
+                <div class="
+                    bg-white
+                    p-8
+                    rounded-[32px]
+                    border border-[#D4A373]/20">
+
+                    <p class="text-[#D4A373] text-xl">
+                        ★★★★★
+                    </p>
+
+                    <p class="
+                        mt-6
+                        text-[#2C1810]/80
+                        leading-relaxed">
+
+                        The atmosphere is warm,
+                        the coffee is excellent,
+                        and every visit feels special.
+
+                    </p>
+
+                    <h4 class="
+                        mt-6
+                        font-bold
+                        text-[#4A2C2A]">
+
+                        Sarah Johnson
+
+                    </h4>
+
+                </div>
+
+                <div class="
+                    bg-white
+                    p-8
+                    rounded-[32px]
+                    border border-[#D4A373]/20">
+
+                    <p class="text-[#D4A373] text-xl">
+                        ★★★★★
+                    </p>
+
+                    <p class="
+                        mt-6
+                        text-[#2C1810]/80
+                        leading-relaxed">
+
+                        Fresh ingredients,
+                        incredible flavors,
+                        and exceptional service.
+
+                    </p>
+
+                    <h4 class="
+                        mt-6
+                        font-bold
+                        text-[#4A2C2A]">
+
+                        Michael Brown
+
+                    </h4>
+
+                </div>
+
+                <div class="
+                    bg-white
+                    p-8
+                    rounded-[32px]
+                    border border-[#D4A373]/20">
+
+                    <p class="text-[#D4A373] text-xl">
+                        ★★★★★
+                    </p>
+
+                    <p class="
+                        mt-6
+                        text-[#2C1810]/80
+                        leading-relaxed">
+
+                        One of the best cafés
+                        in town. Perfect for
+                        meetings and family dinners.
+
+                    </p>
+
+                    <h4 class="
+                        mt-6
+                        font-bold
+                        text-[#4A2C2A]">
+
+                        Emma Wilson
+
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    inline-flex
+                    px-4 py-2
+                    rounded-full
+                    bg-[#D4A373]/10
+                    border border-[#D4A373]/20
+                    text-[#4A2C2A]
+                    font-medium">
+
+                    Contact Us
+
+                </span>
+
+                <h2 class="
+                    heading-font
+                    mt-8
+                    text-5xl
+                    md:text-6xl
+                    font-bold
+                    text-[#4A2C2A]">
+
+                    Reserve Your Table
+
+                </h2>
+
+                <p class="
+                    mt-6
+                    text-lg
+                    text-[#2C1810]/70">
+
+                    We'd love to welcome you. Book a table,
+                    ask a question, or simply say hello.
+
+                </p>
+
+            </div>
+
+            <div class="
+                grid
+                lg:grid-cols-2
+                gap-10
+                mt-20">
+
+                <!-- Contact Information -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    p-10
+                    border border-[#D4A373]/20">
+
+                    <h3 class="
+                        heading-font
+                        text-3xl
+                        font-bold
+                        text-[#4A2C2A]">
+
+                        Visit Us
+
+                    </h3>
+
+                    <div class="space-y-8 mt-10">
+
+                        <div>
+                            <p class="font-semibold text-[#4A2C2A]">
+                                Address
+                            </p>
+
+                            <p class="mt-2 text-[#2C1810]/70">
+                                123 Main Street,
+                                Downtown City
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold text-[#4A2C2A]">
+                                Phone
+                            </p>
+
+                            <p class="mt-2 text-[#2C1810]/70">
+                                +1 (555) 123-4567
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold text-[#4A2C2A]">
+                                Email
+                            </p>
+
+                            <p class="mt-2 text-[#2C1810]/70">
+                                hello@cafearoma.com
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold text-[#4A2C2A]">
+                                Opening Hours
+                            </p>
+
+                            <p class="mt-2 text-[#2C1810]/70">
+                                Monday - Sunday
+                                <br>
+                                8:00 AM - 11:00 PM
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Reservation Form -->
+                <div class="
+                    bg-white
+                    rounded-[32px]
+                    p-10
+                    border border-[#D4A373]/20">
+
+                    <form class="space-y-5">
+
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            class="
+                            w-full
+                            px-5 py-4
+                            rounded-2xl
+                            border border-[#D4A373]/20
+                            outline-none">
+
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            class="
+                            w-full
+                            px-5 py-4
+                            rounded-2xl
+                            border border-[#D4A373]/20
+                            outline-none">
+
+                        <input
+                            type="date"
+                            class="
+                            w-full
+                            px-5 py-4
+                            rounded-2xl
+                            border border-[#D4A373]/20
+                            outline-none">
+
+                        <textarea
+                            rows="5"
+                            placeholder="Special Requests"
+                            class="
+                            w-full
+                            px-5 py-4
+                            rounded-2xl
+                            border border-[#D4A373]/20
+                            outline-none"></textarea>
+
+                        <button
+                            class="
+                            w-full
+                            py-4
+                            rounded-full
+                            bg-[#4A2C2A]
+                            text-white
+                            font-semibold
+                            hover:bg-[#2C1810]
+                            transition">
+
+                            Reserve Now
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="
+        bg-[#4A2C2A]
+        text-white
+        py-20
+        px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="
+                grid
+                md:grid-cols-2
+                lg:grid-cols-4
+                gap-12">
+
+                <!-- Brand -->
+                <div>
+
+                    <h2 class="
+                        heading-font
+                        text-4xl
+                        font-bold">
+
+                        Café Aroma
+
+                    </h2>
+
+                    <p class="
+                        mt-6
+                        text-white/70
+                        leading-relaxed">
+
+                        Bringing people together
+                        through great food,
+                        handcrafted coffee,
+                        and warm hospitality.
+
+                    </p>
+
+                </div>
+
+                <!-- Links -->
+                <div>
+
+                    <h3 class="
+                        font-semibold
+                        text-lg">
+
+                        Quick Links
+
+                    </h3>
+
+                    <ul class="
+                        mt-6
+                        space-y-3
+                        text-white/70">
+
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h3 class="
+                        font-semibold
+                        text-lg">
+
+                        Contact
+
+                    </h3>
+
+                    <div class="
+                        mt-6
+                        space-y-3
+                        text-white/70">
+
+                        <p>+1 (555) 123-4567</p>
+                        <p>hello@cafearoma.com</p>
+                        <p>123 Main Street</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Hours -->
+                <div>
+
+                    <h3 class="
+                        font-semibold
+                        text-lg">
+
+                        Opening Hours
+
+                    </h3>
+
+                    <div class="
+                        mt-6
+                        space-y-3
+                        text-white/70">
+
+                        <p>Mon - Fri: 8AM - 10PM</p>
+                        <p>Saturday: 8AM - 11PM</p>
+                        <p>Sunday: 9AM - 11PM</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="
+                mt-16
+                pt-8
+                border-t
+                border-white/10
+                flex
+                flex-col
+                md:flex-row
+                justify-between
+                items-center
+                gap-4">
+
+                <p class="
+                    text-white/50
+                    text-sm">
+
+                    © 2026 Café Aroma. All rights reserved.
+
+                </p>
+
+                <div class="
+                    flex
+                    gap-6
+                    text-white/70">
+
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+
+    <title>Portfolio</title>
+</head>
+
+<body class="bg-[#FAFAFA] text-gray-900">
+
+    <!-- Background Glow -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px]
+                bg-indigo-200 blur-[140px] opacity-50 -z-10">
+    </div>
+
+    <!-- Navbar -->
+    <nav
+    x-data="{ scrolled: false }"
+    @scroll.window="scrolled = window.pageYOffset > 50"
+    class="fixed top-5 left-0 w-full px-4 z-50">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div
+                :class="scrolled
+                ? 'bg-white/80 backdrop-blur-2xl border border-gray-200 shadow-lg py-3'
+                : 'bg-white/40 backdrop-blur-xl border border-white/20 py-4'"
+                class="
+                transition-all
+                duration-300
+                rounded-full
+                px-8
+                flex
+                items-center
+                justify-between">
+
+                <!-- Logo -->
+                <a href="#home"
+                class="text-2xl font-extrabold tracking-tight">
+
+                    Yash<span class="text-indigo-600">.</span>
+
+                </a>
+
+                <!-- Navigation -->
+                <ul class="hidden md:flex items-center gap-10">
+
+                    <li>
+                        <a href="#about"
+                        class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects"
+                        class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#skills"
+                        class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact"
+                        class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- CTA Button -->
+                <a href="#contact"
+                class="
+                hidden md:flex
+                items-center
+                gap-2
+                px-6
+                py-3
+                rounded-full
+                bg-gray-900
+                text-white
+                text-sm
+                font-semibold
+                hover:bg-black
+                transition">
+
+                    Let's Talk
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Placeholder -->
+    <!-- HERO SECTION -->
+    <section
+        id="home"
+        class="min-h-screen flex items-center justify-center px-6">
+
+        <div class="max-w-7xl mx-auto w-full">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left Content -->
+                <div>
+
+                    <!-- Badge -->
+                    <span class="
+                        inline-flex
+                        items-center
+                        px-4
+                        py-2
+                        rounded-full
+                        border
+                        border-gray-200
+                        bg-white
+                        text-sm
+                        font-medium
+                        text-indigo-600">
+
+                        Available For Freelance & Remote Work
+
+                    </span>
+
+                    <!-- Heading -->
+                    <h1 class="
+                        mt-8
+                        text-6xl
+                        md:text-7xl
+                        lg:text-8xl
+                        font-extrabold
+                        tracking-tight
+                        leading-[0.95]">
+
+                        Yash Vaidya
+
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="
+                        mt-8
+                        max-w-2xl
+                        text-lg
+                        text-gray-600
+                        leading-relaxed">
+
+                        I'm a developer and creative problem solver focused on
+                        building modern websites, intelligent applications,
+                        and digital experiences that help businesses and
+                        individuals stand out online.
+
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap gap-4 mt-10">
+
+                        <a href="#projects"
+                            class="
+                            px-7
+                            py-4
+                            rounded-full
+                            bg-gray-900
+                            text-white
+                            font-semibold
+                            hover:bg-black
+                            transition">
+
+                            View Projects
+
+                        </a>
+
+                        <a href="#contact"
+                            class="
+                            px-7
+                            py-4
+                            rounded-full
+                            bg-white
+                            border
+                            border-gray-200
+                            font-semibold
+                            hover:bg-gray-50
+                            transition">
+
+                            Contact Me
+
+                        </a>
+
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="
+                        flex
+                        flex-wrap
+                        gap-3
+                        mt-12">
+
+                        <span class="
+                            px-4 py-2
+                            rounded-full
+                            bg-white
+                            border border-gray-200
+                            text-sm">
+
+                            Python
+
+                        </span>
+
+                        <span class="
+                            px-4 py-2
+                            rounded-full
+                            bg-white
+                            border border-gray-200
+                            text-sm">
+
+                            Django
+
+                        </span>
+
+                        <span class="
+                            px-4 py-2
+                            rounded-full
+                            bg-white
+                            border border-gray-200
+                            text-sm">
+
+                            Machine Learning
+
+                        </span>
+
+                        <span class="
+                            px-4 py-2
+                            rounded-full
+                            bg-white
+                            border border-gray-200
+                            text-sm">
+
+                            Tailwind CSS
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="relative">
+
+                    <!-- Main Card -->
+                    <div class="
+                        bg-white
+                        border
+                        border-gray-200
+                        rounded-[32px]
+                        p-10
+                        shadow-sm">
+
+                        <span class="
+                            text-sm
+                            font-semibold
+                            text-indigo-600">
+
+                            Featured Project
+
+                        </span>
+
+                        <h3 class="
+                            mt-4
+                            text-4xl
+                            font-bold
+                            tracking-tight">
+
+                            AI Website
+                            Builder
+
+                        </h3>
+
+                        <p class="
+                            mt-6
+                            text-gray-600
+                            leading-relaxed">
+
+                            A platform that generates complete business
+                            websites using AI, helping users launch
+                            professional websites in minutes.
+
+                        </p>
+
+                        <div class="
+                            mt-10
+                            h-64
+                            rounded-3xl
+                            bg-gradient-to-br
+                            from-indigo-100
+                            via-indigo-50
+                            to-white
+                            border
+                            border-gray-200">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Floating Card -->
+                    <div class="
+                        hidden lg:block
+                        absolute
+                        -bottom-8
+                        -left-8
+                        bg-white
+                        border
+                        border-gray-200
+                        rounded-3xl
+                        p-6
+                        shadow-lg">
+
+                        <p class="
+                            text-4xl
+                            font-bold">
+
+                            10+
+
+                        </p>
+
+                        <p class="
+                            mt-2
+                            text-gray-600">
+
+                            Projects Built
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Section Header -->
+            <div class="mb-20">
+
+                <span class="
+                    text-indigo-600
+                    font-semibold
+                    uppercase
+                    tracking-widest">
+
+                    About Me
+
+                </span>
+
+                <h2 class="
+                    mt-4
+                    text-5xl
+                    md:text-6xl
+                    font-extrabold
+                    tracking-tight">
+
+                    Passionate About Building
+                    Useful Digital Products.
+
+                </h2>
+
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Photo Placeholder -->
+                <div>
+
+                    <div class="
+                        w-full
+                        h-[550px]
+                        rounded-[32px]
+                        border-2
+                        border-dashed
+                        border-gray-300
+                        bg-white
+                        flex
+                        items-center
+                        justify-center">
+
+                        <div class="text-center">
+
+                            <div class="
+                                w-20
+                                h-20
+                                rounded-full
+                                bg-gray-100
+                                mx-auto">
+
+                            </div>
+
+                            <p class="
+                                mt-6
+                                text-gray-500
+                                font-medium">
+
+                                Add Your Photo Here
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Content -->
+                <div>
+
+                    <p class="
+                        text-lg
+                        text-gray-600
+                        leading-relaxed">
+
+                        I'm a Machine Learning Developer and web developer
+                        who enjoys turning ideas into practical digital
+                        solutions. My focus is on building applications
+                        that are clean, functional, and user-friendly.
+
+                    </p>
+
+                    <p class="
+                        mt-6
+                        text-lg
+                        text-gray-600
+                        leading-relaxed">
+
+                        From AI-powered tools to modern websites,
+                        I enjoy solving real-world problems through
+                        technology and continuously learning new
+                        skills to improve my craft.
+
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="
+                        grid
+                        grid-cols-2
+                        gap-6
+                        mt-12">
+
+                        <div>
+
+                            <h3 class="
+                                text-3xl
+                                font-bold">
+
+                                10+
+
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Projects Built
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="
+                                text-3xl
+                                font-bold">
+
+                                AI
+
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Focus Area
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Expertise -->
+            <div class="mt-24">
+
+                <h3 class="
+                    text-3xl
+                    font-bold
+                    tracking-tight
+                    text-center">
+
+                    Expertise
+
+                </h3>
+
+                <div class="
+                    grid
+                    md:grid-cols-2
+                    gap-6
+                    mt-12">
+
+                    <!-- Card 1 -->
+                    <div class="
+                        bg-white
+                        border
+                        border-gray-200
+                        rounded-3xl
+                        p-8
+                        hover:shadow-lg
+                        transition">
+
+                        <h4 class="
+                            text-xl
+                            font-bold">
+
+                            Machine Learning
+
+                        </h4>
+
+                        <p class="
+                            mt-4
+                            text-gray-600">
+
+                            Building intelligent applications
+                            using machine learning and AI.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="
+                        bg-white
+                        border
+                        border-gray-200
+                        rounded-3xl
+                        p-8
+                        hover:shadow-lg
+                        transition">
+
+                        <h4 class="
+                            text-xl
+                            font-bold">
+
+                            Django Development
+
+                        </h4>
+
+                        <p class="
+                            mt-4
+                            text-gray-600">
+
+                            Creating scalable and reliable
+                            web applications.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="
+                        bg-white
+                        border
+                        border-gray-200
+                        rounded-3xl
+                        p-8
+                        hover:shadow-lg
+                        transition">
+
+                        <h4 class="
+                            text-xl
+                            font-bold">
+
+                            UI Development
+
+                        </h4>
+
+                        <p class="
+                            mt-4
+                            text-gray-600">
+
+                            Designing clean and modern
+                            user experiences.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="
+                        bg-white
+                        border
+                        border-gray-200
+                        rounded-3xl
+                        p-8
+                        hover:shadow-lg
+                        transition">
+
+                        <h4 class="
+                            text-xl
+                            font-bold">
+
+                            Problem Solving
+
+                        </h4>
+
+                        <p class="
+                            mt-4
+                            text-gray-600">
+
+                            Transforming complex ideas
+                            into practical solutions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    text-indigo-600
+                    font-semibold
+                    uppercase
+                    tracking-widest">
+
+                    Skills
+
+                </span>
+
+                <h2 class="
+                    mt-4
+                    text-5xl
+                    md:text-6xl
+                    font-extrabold
+                    tracking-tight">
+
+                    Technologies & Tools
+
+                </h2>
+
+                <p class="
+                    mt-6
+                    text-lg
+                    text-gray-600">
+
+                    Technologies I use to build modern
+                    applications and digital experiences.
+
+                </p>
+
+            </div>
+
+            <div class="
+                grid
+                md:grid-cols-2
+                lg:grid-cols-4
+                gap-6
+                mt-16">
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">Python</h3>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">Django</h3>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">Machine Learning</h3>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">Tailwind CSS</h3>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">HTML5</h3>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">CSS3</h3>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">Git & GitHub</h3>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-3xl p-8">
+                    <h3 class="font-bold text-xl">APIs</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    text-indigo-600
+                    font-semibold
+                    uppercase
+                    tracking-widest">
+
+                    Projects
+
+                </span>
+
+                <h2 class="
+                    mt-4
+                    text-5xl
+                    md:text-6xl
+                    font-extrabold
+                    tracking-tight">
+
+                    Featured Work
+
+                </h2>
+
+                <p class="
+                    mt-6
+                    text-lg
+                    text-gray-600">
+
+                    A selection of projects showcasing
+                    my development and problem-solving skills.
+
+                </p>
+
+            </div>
+
+            <!-- Featured Project -->
+            <div class="
+                mt-20
+                bg-white
+                border
+                border-gray-200
+                rounded-[32px]
+                overflow-hidden">
+
+                <div class="grid lg:grid-cols-2">
+
+                    <!-- Image Placeholder -->
+                    <div class="
+                        h-[400px]
+                        bg-gray-100
+                        flex
+                        items-center
+                        justify-center">
+
+                        <span class="text-gray-400">
+                            Project Screenshot
+                        </span>
+
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-10">
+
+                        <span class="
+                            text-sm
+                            font-semibold
+                            text-indigo-600">
+
+                            Featured Project
+
+                        </span>
+
+                        <h3 class="
+                            mt-4
+                            text-4xl
+                            font-bold">
+
+                            AI Website Builder
+
+                        </h3>
+
+                        <p class="
+                            mt-6
+                            text-gray-600
+                            leading-relaxed">
+
+                            Generate complete business websites
+                            using AI-powered content generation,
+                            dynamic templates, and automated layouts.
+
+                        </p>
+
+                        <div class="
+                            flex
+                            flex-wrap
+                            gap-3
+                            mt-8">
+
+                            <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-sm">
+                                Django
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-sm">
+                                OpenAI
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-sm">
+                                Tailwind
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Small Projects -->
+            <div class="
+                grid
+                md:grid-cols-2
+                gap-6
+                mt-8">
+
+                <div class="
+                    bg-white
+                    border
+                    border-gray-200
+                    rounded-3xl
+                    p-8">
+
+                    <h3 class="
+                        text-2xl
+                        font-bold">
+
+                        Sales & Inventory Tracker
+
+                    </h3>
+
+                    <p class="
+                        mt-4
+                        text-gray-600">
+
+                        Track inventory, sales,
+                        and business performance
+                        through a centralized dashboard.
+
+                    </p>
+
+                </div>
+
+                <div class="
+                    bg-white
+                    border
+                    border-gray-200
+                    rounded-3xl
+                    p-8">
+
+                    <h3 class="
+                        text-2xl
+                        font-bold">
+
+                        Twitter Data Mining
+
+                    </h3>
+
+                    <p class="
+                        mt-4
+                        text-gray-600">
+
+                        Collect, analyze, and visualize
+                        social media data using APIs
+                        and Python.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    text-indigo-600
+                    font-semibold
+                    uppercase
+                    tracking-widest">
+
+                    Experience
+
+                </span>
+
+                <h2 class="
+                    mt-4
+                    text-5xl
+                    md:text-6xl
+                    font-extrabold
+                    tracking-tight">
+
+                    My Journey
+
+                </h2>
+
+                <p class="
+                    mt-6
+                    text-lg
+                    text-gray-600">
+
+                    A timeline of learning, building,
+                    and growing as a developer.
+
+                </p>
+
+            </div>
+
+            <div class="mt-20 max-w-4xl mx-auto">
+
+                <!-- Item -->
+                <div class="
+                    relative
+                    pl-10
+                    pb-12
+                    border-l-2
+                    border-gray-200">
+
+                    <div class="
+                        absolute
+                        left-[-10px]
+                        top-0
+                        w-5
+                        h-5
+                        rounded-full
+                        bg-indigo-600">
+                    </div>
+
+                    <span class="text-sm text-gray-500">
+                        2026 - Present
+                    </span>
+
+                    <h3 class="
+                        mt-2
+                        text-2xl
+                        font-bold">
+
+                        AI Website Builder
+
+                    </h3>
+
+                    <p class="
+                        mt-3
+                        text-gray-600">
+
+                        Building an AI-powered platform
+                        that generates complete business
+                        websites using Django and AI.
+
+                    </p>
+
+                </div>
+
+                <!-- Item -->
+                <div class="
+                    relative
+                    pl-10
+                    pb-12
+                    border-l-2
+                    border-gray-200">
+
+                    <div class="
+                        absolute
+                        left-[-10px]
+                        top-0
+                        w-5
+                        h-5
+                        rounded-full
+                        bg-indigo-600">
+                    </div>
+
+                    <span class="text-sm text-gray-500">
+                        2025
+                    </span>
+
+                    <h3 class="
+                        mt-2
+                        text-2xl
+                        font-bold">
+
+                        Freelance Video Editing
+
+                    </h3>
+
+                    <p class="
+                        mt-3
+                        text-gray-600">
+
+                        Worked with content creators,
+                        improving storytelling and audience
+                        engagement through video editing.
+
+                    </p>
+
+                </div>
+
+                <!-- Item -->
+                <div class="
+                    relative
+                    pl-10
+                    border-l-2
+                    border-gray-200">
+
+                    <div class="
+                        absolute
+                        left-[-10px]
+                        top-0
+                        w-5
+                        h-5
+                        rounded-full
+                        bg-indigo-600">
+                    </div>
+
+                    <span class="text-sm text-gray-500">
+                        2024
+                    </span>
+
+                    <h3 class="
+                        mt-2
+                        text-2xl
+                        font-bold">
+
+                        Started Learning AI & ML
+
+                    </h3>
+
+                    <p class="
+                        mt-3
+                        text-gray-600">
+
+                        Focused on Python, machine learning,
+                        web development, and software engineering.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center">
+
+                <span class="
+                    text-indigo-600
+                    font-semibold
+                    uppercase
+                    tracking-widest">
+
+                    Testimonials
+
+                </span>
+
+                <h2 class="
+                    mt-4
+                    text-5xl
+                    md:text-6xl
+                    font-extrabold">
+
+                    What People Say
+
+                </h2>
+
+            </div>
+
+            <div class="
+                grid
+                md:grid-cols-3
+                gap-6
+                mt-16">
+
+                <div class="
+                    bg-white
+                    border
+                    border-gray-200
+                    rounded-3xl
+                    p-8">
+
+                    <p class="text-gray-600">
+                        "Professional, responsive,
+                        and easy to work with."
+                    </p>
+
+                    <h4 class="
+                        mt-6
+                        font-bold">
+
+                        Client Name
+
+                    </h4>
+
+                </div>
+
+                <div class="
+                    bg-white
+                    border
+                    border-gray-200
+                    rounded-3xl
+                    p-8">
+
+                    <p class="text-gray-600">
+                        "Delivered exactly what
+                        was promised and on time."
+                    </p>
+
+                    <h4 class="
+                        mt-6
+                        font-bold">
+
+                        Client Name
+
+                    </h4>
+
+                </div>
+
+                <div class="
+                    bg-white
+                    border
+                    border-gray-200
+                    rounded-3xl
+                    p-8">
+
+                    <p class="text-gray-600">
+                        "Great communication and
+                        strong technical skills."
+                    </p>
+
+                    <h4 class="
+                        mt-6
+                        font-bold">
+
+                        Client Name
+
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center max-w-3xl mx-auto">
+
+                <span class="
+                    text-indigo-600
+                    font-semibold
+                    uppercase
+                    tracking-widest">
+
+                    Contact
+
+                </span>
+
+                <h2 class="
+                    mt-4
+                    text-5xl
+                    md:text-6xl
+                    font-extrabold
+                    tracking-tight">
+
+                    Let's Work Together
+
+                </h2>
+
+                <p class="
+                    mt-6
+                    text-lg
+                    text-gray-600">
+
+                    Have a project in mind or want to
+                    discuss opportunities? Let's connect.
+
+                </p>
+
+            </div>
+
+            <div class="
+                max-w-3xl
+                mx-auto
+                mt-16">
+
+                <div class="
+                    bg-white
+                    border
+                    border-gray-200
+                    rounded-[32px]
+                    p-10">
+
+                    <form class="space-y-6">
+
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            class="
+                            w-full
+                            px-5
+                            py-4
+                            rounded-2xl
+                            border
+                            border-gray-200
+                            outline-none">
+
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            class="
+                            w-full
+                            px-5
+                            py-4
+                            rounded-2xl
+                            border
+                            border-gray-200
+                            outline-none">
+
+                        <textarea
+                            rows="6"
+                            placeholder="Your Message"
+                            class="
+                            w-full
+                            px-5
+                            py-4
+                            rounded-2xl
+                            border
+                            border-gray-200
+                            outline-none"></textarea>
+
+                        <button
+                            class="
+                            w-full
+                            py-4
+                            rounded-full
+                            bg-gray-900
+                            text-white
+                            font-semibold">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0F172A] text-white py-20 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+
+                <!-- Left Side -->
+                <div>
+
+                    <h2 class="
+                        text-4xl
+                        font-extrabold
+                        tracking-tight">
+
+                        Yash<span class="text-indigo-400">.</span>
+
+                    </h2>
+
+                    <p class="
+                        mt-6
+                        text-slate-400
+                        max-w-md
+                        leading-relaxed">
+
+                        Machine Learning Developer focused on building
+                        intelligent applications, modern web experiences,
+                        and practical digital solutions.
+
+                    </p>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="grid grid-cols-2 gap-10">
+
+                    <!-- Navigation -->
+                    <div>
+
+                        <h3 class="
+                            font-semibold
+                            text-lg">
+
+                            Navigation
+
+                        </h3>
+
+                        <ul class="
+                            mt-6
+                            space-y-4
+                            text-slate-400">
+
+                            <li>
+                                <a href="#home" class="hover:text-white transition">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#about" class="hover:text-white transition">
+                                    About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#skills" class="hover:text-white transition">
+                                    Skills
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#projects" class="hover:text-white transition">
+                                    Projects
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#contact" class="hover:text-white transition">
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Connect -->
+                    <div>
+
+                        <h3 class="
+                            font-semibold
+                            text-lg">
+
+                            Connect
+
+                        </h3>
+
+                        <ul class="
+                            mt-6
+                            space-y-4
+                            text-slate-400">
+
+                            <li>
+                                <a href="#" class="hover:text-white transition">
+                                    GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-white transition">
+                                    LinkedIn
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-white transition">
+                                    Twitter
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mailto:hello@example.com"
+                                class="hover:text-white transition">
+
+                                    Email
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="
+                mt-16
+                pt-8
+                border-t
+                border-slate-800">
+
+                <div class="
+                    flex
+                    flex-col
+                    md:flex-row
+                    items-center
+                    justify-between
+                    gap-4">
+
+                    <p class="
+                        text-sm
+                        text-slate-500">
+
+                        © 2026 Yash Vaidya. All rights reserved.
+
+                    </p>
+
+                    <p class="
+                        text-sm
+                        text-slate-500">
+
+                        Built with HTML, Tailwind CSS & ❤️
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
